@@ -60,6 +60,12 @@
 
                 --$_SESSION['products'][$_GET['id']]['qtt'];
 
+                if($_SESSION['products'][$_GET['id']]['qtt'] == 0){
+
+                    unset($_SESSION['products'][$_GET['id']]);
+
+                }
+
                 header("Location:recap.php");
 
                 break;
