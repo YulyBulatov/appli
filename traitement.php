@@ -35,6 +35,15 @@
             case "delete_all":
                 
                 unset($_SESSION['products']);
+
+            case "qtt_up":
+
+                ++$_SESSION['products'][$_GET['id']]['qtt'];
+
+            case "qtt_down":
+
+                --$_SESSION['products'][$_GET['id']]['qtt'];
+
 }
 }
 
