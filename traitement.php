@@ -28,11 +28,15 @@
 
                 }
 
+                header("Location:index.php");
+
                 break;
 
             case "delete":
 
                 unset($_SESSION['products'][$_GET['id']]);
+
+                header("Location:recap.php");
 
                 break;
 
@@ -40,17 +44,23 @@
 
                 unset($_SESSION['products']);
 
+                header("Location:recap.php");
+
                 break;
 
             case "qtt_up":
 
                 ++$_SESSION['products'][$_GET['id']]['qtt'];
 
+                header("Location:recap.php");
+
                 break;
 
             case "qtt_down":
 
                 --$_SESSION['products'][$_GET['id']]['qtt'];
+
+                header("Location:recap.php");
 
                 break;
 
@@ -60,4 +70,4 @@
 
 
 
-    header("Location:index.php");
+    
