@@ -33,9 +33,9 @@
                         "<td>".$index."</td>",
                         "<td>".$product['name']."</td>",
                         "<td>".number_format($product['price'], 2, ",", "&nbsp;")."&nbsp;€</td>",
-                        "<td><button type='submit' formmethod='get' formaction='traitement.php?action=qtt_up&id=$index' value='qtt_up'>+</button>".$product['qtt']."<button type='submit' formmethod='get' formaction='traitement.php?action=qtt_down&id=$index' value='qtt_down'>-</button></td>",
+                        "<td><a href='traitement.php?action=qtt_up&id=$index' value='qtt_up'>+</a>".$product['qtt']."<a href='traitement.php?action=qtt_down&id=$index' value='qtt_down'>-</a></td>",
                         "<td>".number_format($product['total'], 2, ",", "&nbsp;")."&nbsp;€</td>",
-                        "<td><button type='submit' formmethod='get' formaction='traitement.php?action=delete&id=$index' value='delete'>Supprimer</button></td>",
+                        "<td><a href='traitement.php?action=delete&id=$index' value='delete'>Supprimer</a></td>",
                     "</tr>";
                 $totalGeneral+=$product['total'];
             }
@@ -44,8 +44,7 @@
                     "<td><strong>".number_format($totalGeneral, 2, ",", "&nbsp;")."&nbsp;€</strong></td>",
                     "<td></td>",
                     "<td></td>",
-                    "<td></td>",
-                    "<td><button type='submit' formmethod='get' formaction='traitement.php?action=delete_all' value='delete_all'>Supprimer Tout</button></td>",
+                    "<td><a href='traitement.php?action=delete_all'>Supprimer Tout</a></td>",
                   "</tr>",  
                 "</tbody>",
                 "</table>";

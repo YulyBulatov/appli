@@ -46,6 +46,8 @@
             else{
                 echo count($_SESSION['products']);
             }
+
+            echo var_dump($_SESSION);
             ?>
         </p>
 
