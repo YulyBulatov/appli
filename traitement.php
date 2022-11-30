@@ -31,6 +31,10 @@
             case "delete":
 
                 unset($_SESSION['products'][$_GET['id']]);
+
+            case "delete_all":
+                
+                unset($_SESSION['products']);
 }
 }
 
