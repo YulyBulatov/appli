@@ -30,7 +30,7 @@
 
             case "delete":
 
-                
+                unset($_SESSION['products'][$_GET['id']]);
 }
 }
 

@@ -16,7 +16,7 @@
         }
         else{
             echo "<table>",
-                    "<thead?>",
+                    "<thead>",
                         "<tr>",
                             "<th>#</th>",
                             "<th>Nom</th>",
@@ -35,7 +35,7 @@
                         "<td>".number_format($product['price'], 2, ",", "&nbsp;")."&nbsp;€</td>",
                         "<td>".$product['qtt']."</td>",
                         "<td>".number_format($product['total'], 2, ",", "&nbsp;")."&nbsp;€</td>",
-                        "<td><button type='submit' formmethod='get' formaction='traitement.php?action=delete' value='delete'>Supprimer</button></td>",
+                        "<td><button type='submit' formmethod='get' formaction='traitement.php?action=delete&id=$index' value='delete'>Supprimer</button></td>",
                     "</tr>";
                 $totalGeneral+=$product['total'];
             }
